@@ -9,7 +9,7 @@
                 </div>
                 <div class="col">
                     <nav>
-                        <a href="#" v-for="(link, index) in navLinks" :key="index">{{link.link}}</a>
+                        <a href="#" v-for="(item, index) in navLinks" :key="index">{{item.link}}</a>
                     </nav>
                 </div>
             </div>
