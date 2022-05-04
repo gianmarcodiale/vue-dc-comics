@@ -1,4 +1,25 @@
-<template></template>
+<template>
+  <main>
+    <div class="jumbotron"></div>
+    <div class="container">
+      <div class="row row-cols-6">
+        <div class="col" v-for="(card, index) in comicsList" :key="index">
+          <div class="comic-card">
+            <img :src="card.thumb" :alt="card.series" class="img-fluid" />
+            <div class="card-text">
+              <h6>{{ card.series }}</h6>
+              <p>{{ card.type }}</p>
+              <p>{{ card.price }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="load-more-btn">
+        <button>Load More</button>
+      </div>
+    </div>
+  </main>
+</template>
 
 <script>
 export default {
@@ -96,5 +117,44 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss" scoped>
+@import "@/assets/sass/_variables.scss";
+
+main {
+  .jumbotron {
+    background-image: url("@/assets/img/jumbotron.jpg");
+    height: 300px;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .row {
+    padding: 3rem 0 0 1rem;
+  }
+
+  .card-text {
+    padding: 1rem 0;
+  }
+
+  h6,
+  p {
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+  }
+
+  .load-more-btn {
+      padding: 1rem;
+      text-align: center;
+    button {
+      background-color: $brandColor;
+      border: none;
+      color: white;
+      padding: 0.5rem 2rem;
+      font-size: 1rem;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+  }
+}
 </style>

@@ -170,7 +170,7 @@ footer {
     }
 
     .footer-links {
-        padding: 4rem;
+        padding: 4rem 0 4rem 0.75rem;
     }
 
     h4 {

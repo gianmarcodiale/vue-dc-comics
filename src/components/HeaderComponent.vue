@@ -61,6 +61,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "@/assets/sass/_variables.scss";
+
 header {
     padding: 1rem;
     
@@ -71,6 +73,10 @@ header {
         font-size: 0.9rem;
         font-weight: 600;
         color: black;
+
+        &:hover {
+            border-bottom: 3px solid $brandColor;
+        }
     }
 }
 </style>

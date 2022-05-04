@@ -1,9 +1,7 @@
 <template>
   <div id="app">
     <SiteHeader/>
-    <main>
-      <h1>-> Content goes here</h1>
-    </main>
+    <SiteMain/>
     <SiteShopSection/>
     <SiteFooter/>
     <SiteSocials/>
@@ -14,7 +12,8 @@
 import SiteHeader from "@/components/HeaderComponent.vue";
 import SiteShopSection from "@/components/ShopSectionComponent.vue";
 import SiteFooter from "@/components/FooterComponent.vue";
-import SiteSocials from "@/components/SocialsComponent.vue"
+import SiteSocials from "@/components/SocialsComponent.vue";
+import SiteMain from "@/components/MainComponent.vue"
 
 export default {
   name: 'App',
@@ -22,7 +21,8 @@ export default {
     SiteHeader,
     SiteShopSection,
     SiteFooter,
-    SiteSocials
+    SiteSocials,
+    SiteMain
   }
 }
 </script>
