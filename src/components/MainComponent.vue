@@ -5,7 +5,9 @@
       <div class="row row-cols-6">
         <div class="col" v-for="(card, index) in comicsList" :key="index">
           <div class="comic-card">
-            <img :src="card.thumb" :alt="card.series" class="img-fluid" />
+            <div class="card-img">
+              <img :src="card.thumb" :alt="card.series" class="img-fluid"/>
+            </div>
             <div class="card-text">
               <h6>{{ card.series }}</h6>
               <p>{{ card.type }}</p>
@@ -132,11 +134,12 @@ main {
     padding: 3rem 0 0 1rem;
   }
 
-  img {
-      width: 200px;
-      height: 200px;
-      object-fit: cover;
-      object-position: top;
+  .card-img {
+      aspect-ratio: 1/1;
+      overflow: hidden;
+      img {
+          width: 100%;
+      }
   }
 
   .card-text {
@@ -151,8 +154,8 @@ main {
   }
 
   .load-more-btn {
-      padding: 1rem;
-      text-align: center;
+    padding: 1rem;
+    text-align: center;
     button {
       background-color: $brandColor;
       border: none;
