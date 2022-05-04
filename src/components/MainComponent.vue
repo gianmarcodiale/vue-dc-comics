@@ -132,6 +132,13 @@ main {
     padding: 3rem 0 0 1rem;
   }
 
+  img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      object-position: top;
+  }
+
   .card-text {
     padding: 1rem 0;
   }
