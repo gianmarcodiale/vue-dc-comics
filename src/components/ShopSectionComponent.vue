@@ -2,25 +2,9 @@
     <section>
         <div class="container">
             <div class="row">
-                <div class="col d-flex align-items-center">
-                    <img src="@/assets/img/buy-comics-digital-comics.png" alt="" class="img-fluid">
-                    <a href="#">Digital Comics</a>
-                </div>
-                <div class="col d-flex align-items-center">
-                    <img src="@/assets/img/buy-comics-merchandise.png" alt="" class="img-fluid">
-                    <a href="#">DC Merchandise</a>
-                </div>
-                <div class="col d-flex align-items-center">
-                    <img src="@/assets/img/buy-comics-subscriptions.png" alt="" class="img-fluid">
-                    <a href="#">Subscription</a>
-                </div>
-                <div class="col d-flex align-items-center">
-                    <img src="@/assets/img/buy-comics-shop-locator.png" alt="" class="img-fluid">
-                    <a href="#">Comic Shop Locator</a>
-                </div>
-                <div class="col d-flex align-items-center">
-                    <img src="@/assets/img/buy-dc-power-visa.svg" alt="" class="img-fluid">
-                    <a href="#">DC Power Visa</a>
+                <div class="col d-flex align-items-center" v-for="item in bannerList" :key="item.id">
+                    <img :src="item.src" alt="" class="img-fluid">
+                    <a href="#">{{item.text}}</a>
                 </div>
             </div>
         </div>
@@ -30,6 +14,37 @@
 <script>
 export default {
     name: 'SiteShopSection',
+    data() {
+        return {
+            bannerList: [
+                {
+                    id: 1,
+                    src: require('@/assets/img/buy-comics-digital-comics.png'),
+                    text: 'Digital Comics'
+                },
+                {
+                    id: 2,
+                    src: require('@/assets/img/buy-comics-merchandise.png'),
+                    text: 'DC Merchandise'
+                },
+                {
+                    id: 3,
+                    src: require('@/assets/img/buy-comics-subscriptions.png'),
+                    text: 'Subscription'
+                },
+                {
+                    id: 4,
+                    src: require('@/assets/img/buy-comics-shop-locator.png'),
+                    text: 'Comic Shop Locator'
+                },
+                {
+                    id: 5,
+                    src: require('@/assets/img/buy-dc-power-visa.svg'),
+                    text: 'DC Power Visa'
+                }
+            ]
+        }
+    }
 }
 </script>
 
@@ -38,7 +53,7 @@ export default {
 
 section {
     background-color: $brandColor;
-    padding: 4rem;
+    padding: 4rem 0;
 
     a {
         text-decoration: none;

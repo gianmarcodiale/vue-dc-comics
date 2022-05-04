@@ -99,8 +99,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col">
-                    <img src="@/assets/img/dc-logo-bg.png" alt="" class="img-fluid">
+                <div class="col dc-logo">
                 </div>
             </div>
         </div>
@@ -120,6 +119,13 @@ footer {
     background-image: url("@/assets/img/footer-bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+
+    .dc-logo {
+        background-image: url("@/assets/img/dc-logo-bg.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
 
     .footer-links {
         padding: 4rem;

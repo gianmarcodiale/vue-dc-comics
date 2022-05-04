@@ -33,7 +33,7 @@ section {
 
     button {
         border: 1px solid $brandColor;
-        background-color: $footerColor;
+        background-color: transparent;
         color: white;
         padding: 0.75rem;
     }

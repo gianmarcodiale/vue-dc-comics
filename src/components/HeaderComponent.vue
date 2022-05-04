@@ -63,6 +63,7 @@ export default {
 <style lang="scss" scoped>
 header {
     padding: 1rem;
+    
     a {
         text-decoration: none;
         text-transform: uppercase;
